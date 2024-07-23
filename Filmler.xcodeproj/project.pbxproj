@@ -18,6 +18,8 @@
 		D6A3914B2C4FA171003C83E3 /* FilmDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3914A2C4FA171003C83E3 /* FilmDetay.swift */; };
 		D6A3914D2C4FA4B1003C83E3 /* KategoriItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3914C2C4FA4B1003C83E3 /* KategoriItem.swift */; };
 		D6A3914F2C4FA507003C83E3 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3914E2C4FA507003C83E3 /* Anasayfa.swift */; };
+		D6F981AA2C4FD6F900AC934B /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981A92C4FD6F900AC934B /* AnasayfaViewModel.swift */; };
+		D6F981AC2C4FD75C00AC934B /* FilmSayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F981AB2C4FD75C00AC934B /* FilmSayfaViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		D6A3914A2C4FA171003C83E3 /* FilmDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetay.swift; sourceTree = "<group>"; };
 		D6A3914C2C4FA4B1003C83E3 /* KategoriItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriItem.swift; sourceTree = "<group>"; };
 		D6A3914E2C4FA507003C83E3 /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
+		D6F981A92C4FD6F900AC934B /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
+		D6F981AB2C4FD75C00AC934B /* FilmSayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSayfaViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +69,11 @@
 		D6A391332C4F9A67003C83E3 /* Filmler */ = {
 			isa = PBXGroup;
 			children = (
+				D6F981A32C4FD65800AC934B /* UI */,
+				D6F981A42C4FD65D00AC934B /* Data */,
 				D6A391342C4F9A67003C83E3 /* FilmlerApp.swift */,
-				D6A391362C4F9A67003C83E3 /* FilmSayfa.swift */,
 				D6A391382C4F9A69003C83E3 /* Assets.xcassets */,
 				D6A3913A2C4F9A69003C83E3 /* Preview Content */,
-				D6A391422C4F9ADF003C83E3 /* Kategoriler.swift */,
-				D6A391442C4F9B6B003C83E3 /* Yonetmenler.swift */,
-				D6A391462C4F9BB1003C83E3 /* Filmler.swift */,
-				D6A391482C4F9C50003C83E3 /* FilmItem.swift */,
-				D6A3914A2C4FA171003C83E3 /* FilmDetay.swift */,
-				D6A3914C2C4FA4B1003C83E3 /* KategoriItem.swift */,
-				D6A3914E2C4FA507003C83E3 /* Anasayfa.swift */,
 			);
 			path = Filmler;
 			sourceTree = "<group>";
@@ -86,6 +84,62 @@
 				D6A3913B2C4F9A69003C83E3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D6F981A32C4FD65800AC934B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D6F981A52C4FD66200AC934B /* View */,
+				D6F981A62C4FD66700AC934B /* ViewModel */,
+				D6F981A72C4FD66D00AC934B /* List */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D6F981A42C4FD65D00AC934B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D6F981A82C4FD67200AC934B /* Entity */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D6F981A52C4FD66200AC934B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6A3914E2C4FA507003C83E3 /* Anasayfa.swift */,
+				D6A391362C4F9A67003C83E3 /* FilmSayfa.swift */,
+				D6A3914A2C4FA171003C83E3 /* FilmDetay.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6F981A62C4FD66700AC934B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6F981A92C4FD6F900AC934B /* AnasayfaViewModel.swift */,
+				D6F981AB2C4FD75C00AC934B /* FilmSayfaViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D6F981A72C4FD66D00AC934B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				D6A3914C2C4FA4B1003C83E3 /* KategoriItem.swift */,
+				D6A391482C4F9C50003C83E3 /* FilmItem.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		D6F981A82C4FD67200AC934B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D6A391442C4F9B6B003C83E3 /* Yonetmenler.swift */,
+				D6A391422C4F9ADF003C83E3 /* Kategoriler.swift */,
+				D6A391462C4F9BB1003C83E3 /* Filmler.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,9 +215,11 @@
 				D6A391492C4F9C50003C83E3 /* FilmItem.swift in Sources */,
 				D6A3914B2C4FA171003C83E3 /* FilmDetay.swift in Sources */,
 				D6A3914D2C4FA4B1003C83E3 /* KategoriItem.swift in Sources */,
+				D6F981AC2C4FD75C00AC934B /* FilmSayfaViewModel.swift in Sources */,
 				D6A391372C4F9A67003C83E3 /* FilmSayfa.swift in Sources */,
 				D6A391352C4F9A67003C83E3 /* FilmlerApp.swift in Sources */,
 				D6A391452C4F9B6B003C83E3 /* Yonetmenler.swift in Sources */,
+				D6F981AA2C4FD6F900AC934B /* AnasayfaViewModel.swift in Sources */,
 				D6A391472C4F9BB1003C83E3 /* Filmler.swift in Sources */,
 				D6A3914F2C4FA507003C83E3 /* Anasayfa.swift in Sources */,
 				D6A391432C4F9ADF003C83E3 /* Kategoriler.swift in Sources */,

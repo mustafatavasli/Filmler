@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		D6A391352C4F9A67003C83E3 /* FilmlerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A391342C4F9A67003C83E3 /* FilmlerApp.swift */; };
-		D6A391372C4F9A67003C83E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A391362C4F9A67003C83E3 /* ContentView.swift */; };
+		D6A391372C4F9A67003C83E3 /* FilmSayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A391362C4F9A67003C83E3 /* FilmSayfa.swift */; };
 		D6A391392C4F9A69003C83E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A391382C4F9A69003C83E3 /* Assets.xcassets */; };
 		D6A3913C2C4F9A69003C83E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A3913B2C4F9A69003C83E3 /* Preview Assets.xcassets */; };
+		D6A391432C4F9ADF003C83E3 /* Kategoriler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A391422C4F9ADF003C83E3 /* Kategoriler.swift */; };
+		D6A391452C4F9B6B003C83E3 /* Yonetmenler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A391442C4F9B6B003C83E3 /* Yonetmenler.swift */; };
+		D6A391472C4F9BB1003C83E3 /* Filmler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A391462C4F9BB1003C83E3 /* Filmler.swift */; };
+		D6A391492C4F9C50003C83E3 /* FilmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A391482C4F9C50003C83E3 /* FilmItem.swift */; };
+		D6A3914B2C4FA171003C83E3 /* FilmDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3914A2C4FA171003C83E3 /* FilmDetay.swift */; };
+		D6A3914D2C4FA4B1003C83E3 /* KategoriItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3914C2C4FA4B1003C83E3 /* KategoriItem.swift */; };
+		D6A3914F2C4FA507003C83E3 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3914E2C4FA507003C83E3 /* Anasayfa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D6A391312C4F9A67003C83E3 /* Filmler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filmler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A391342C4F9A67003C83E3 /* FilmlerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmlerApp.swift; sourceTree = "<group>"; };
-		D6A391362C4F9A67003C83E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D6A391362C4F9A67003C83E3 /* FilmSayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSayfa.swift; sourceTree = "<group>"; };
 		D6A391382C4F9A69003C83E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6A3913B2C4F9A69003C83E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D6A391422C4F9ADF003C83E3 /* Kategoriler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kategoriler.swift; sourceTree = "<group>"; };
+		D6A391442C4F9B6B003C83E3 /* Yonetmenler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yonetmenler.swift; sourceTree = "<group>"; };
+		D6A391462C4F9BB1003C83E3 /* Filmler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filmler.swift; sourceTree = "<group>"; };
+		D6A391482C4F9C50003C83E3 /* FilmItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmItem.swift; sourceTree = "<group>"; };
+		D6A3914A2C4FA171003C83E3 /* FilmDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetay.swift; sourceTree = "<group>"; };
+		D6A3914C2C4FA4B1003C83E3 /* KategoriItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriItem.swift; sourceTree = "<group>"; };
+		D6A3914E2C4FA507003C83E3 /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +66,16 @@
 			isa = PBXGroup;
 			children = (
 				D6A391342C4F9A67003C83E3 /* FilmlerApp.swift */,
-				D6A391362C4F9A67003C83E3 /* ContentView.swift */,
+				D6A391362C4F9A67003C83E3 /* FilmSayfa.swift */,
 				D6A391382C4F9A69003C83E3 /* Assets.xcassets */,
 				D6A3913A2C4F9A69003C83E3 /* Preview Content */,
+				D6A391422C4F9ADF003C83E3 /* Kategoriler.swift */,
+				D6A391442C4F9B6B003C83E3 /* Yonetmenler.swift */,
+				D6A391462C4F9BB1003C83E3 /* Filmler.swift */,
+				D6A391482C4F9C50003C83E3 /* FilmItem.swift */,
+				D6A3914A2C4FA171003C83E3 /* FilmDetay.swift */,
+				D6A3914C2C4FA4B1003C83E3 /* KategoriItem.swift */,
+				D6A3914E2C4FA507003C83E3 /* Anasayfa.swift */,
 			);
 			path = Filmler;
 			sourceTree = "<group>";
@@ -137,8 +158,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6A391372C4F9A67003C83E3 /* ContentView.swift in Sources */,
+				D6A391492C4F9C50003C83E3 /* FilmItem.swift in Sources */,
+				D6A3914B2C4FA171003C83E3 /* FilmDetay.swift in Sources */,
+				D6A3914D2C4FA4B1003C83E3 /* KategoriItem.swift in Sources */,
+				D6A391372C4F9A67003C83E3 /* FilmSayfa.swift in Sources */,
 				D6A391352C4F9A67003C83E3 /* FilmlerApp.swift in Sources */,
+				D6A391452C4F9B6B003C83E3 /* Yonetmenler.swift in Sources */,
+				D6A391472C4F9BB1003C83E3 /* Filmler.swift in Sources */,
+				D6A3914F2C4FA507003C83E3 /* Anasayfa.swift in Sources */,
+				D6A391432C4F9ADF003C83E3 /* Kategoriler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

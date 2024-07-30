@@ -10,28 +10,49 @@ import Foundation
 class FilmSayfaViewModel : ObservableObject {
     @Published var filmlerListesi = [Filmler]()
     
+    let db : FMDatabase?
+    
+    init() {
+        let veritabaniYolu = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let hedefYol = URL(fileURLWithPath: veritabaniYolu).appendingPathComponent("filmler.sqlite")
+        db = FMDatabase(path: hedefYol.path)
+    }
+    
     func filmleriYukle(kategori_id: Int) {
+        db?.open()
+        
         var liste = [Filmler]()
-        let k1 = Kategoriler(kategoriID: 1, kategoriAd: "Aksiyon")
-        let k2 = Kategoriler(kategoriID: 2, kategoriAd: "Drama")
-        let k3 = Kategoriler(kategoriID: 3, kategoriAd: "Bilim Kurgu")
-        let y1 = Yonetmenler(yonetmenID: 1, yonetmenAd: "Quentin Tarantino")
-        let y2 = Yonetmenler(yonetmenID: 2, yonetmenAd: "Christopher Nolan")
-        let y3 = Yonetmenler(yonetmenID: 3, yonetmenAd: "Nuri Bilge Ceylan")
-        let y4 = Yonetmenler(yonetmenID: 4, yonetmenAd: "Roman Polanski")
-        let f1 = Filmler(filmID: 1, filmAd: "Django", filmYil: 2014, filmResim: "thy_logo", kategori: k1, yonetmen: y1)
-        let f2 = Filmler(filmID: 2, filmAd: "Interstellar", filmYil: 2015, filmResim: "thy_logo", kategori: k3, yonetmen: y2)
-        let f3 = Filmler(filmID: 3, filmAd: "Inception", filmYil: 2010, filmResim: "thy_logo", kategori: k3, yonetmen: y2)
-        let f4 = Filmler(filmID: 4, filmAd: "Anadoluda", filmYil: 2011, filmResim: "thy_logo", kategori: k2, yonetmen: y3)
-        let f5 = Filmler(filmID: 5, filmAd: "The Pianist", filmYil: 2008, filmResim: "thy_logo", kategori: k2, yonetmen: y4)
-        let f6 = Filmler(filmID: 6, filmAd: "The Hateful Eight", filmYil: 2017, filmResim: "thy_logo", kategori: k1, yonetmen: y1)
-        liste.append(f1)
-        liste.append(f2)
-        liste.append(f3)
-        liste.append(f4)
-        liste.append(f5)
-        liste.append(f6)
-        let finalListe = liste.filter({ $0.kategori!.kategoriID == kategori_id })
-        filmlerListesi = finalListe
+        
+        do {
+            let result = try db!.executeQuery("SELECT * FROM kategoriler, yonetmenler, filmler WHERE filmler.kategori_id = kategoriler.kategori_id and filmler.yonetmen_id = yonetmenler.yonetmen_id and filmler.kategori_id = ?", values: [kategori_id])
+            
+            while result.next() {
+                let kategori_id = Int(result.string(forColumn: "kategori_id"))!
+                let kategori_ad = result.string(forColumn: "kategori_ad")!
+                
+                let kategori = Kategoriler(kategoriID: kategori_id, kategoriAd: kategori_ad)
+                
+                let yonetmen_id = Int(result.string(forColumn: "yonetmen_id"))!
+                let yonetmen_ad = result.string(forColumn: "yonetmen_ad")!
+                
+                let yonetmen = Yonetmenler(yonetmenID: yonetmen_id, yonetmenAd: yonetmen_ad)  
+                
+                let film_id = Int(result.string(forColumn: "film_id"))!
+                let film_ad = result.string(forColumn: "film_ad")!
+                let film_yil = Int(result.string(forColumn: "film_yil"))!
+                let film_resim = result.string(forColumn: "film_resim")!
+                
+                let film = Filmler(filmID: film_id, filmAd: film_ad, filmYil: film_yil, filmResim: film_resim, kategori: kategori, yonetmen: yonetmen)
+                
+                liste.append(film)
+            }
+            
+            filmlerListesi = liste
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
     }
 }
